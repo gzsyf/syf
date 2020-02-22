@@ -107,6 +107,7 @@ train_step = tf.train.AdamOptimizer(1e-4).minimize(cross_entropy)   # 使用Adam
 
 # ----------- 初始化 ---------------
 init = tf.global_variables_initializer()                            # 初始化变量
+saver = tf.train.Saver()                                            # 创建保存模型
 sess = tf.Session()                                                 # 建立会话
 train_writer = tf.summary.FileWriter('logs2/train', sess.graph)     # 画出train数据集的loss曲线
 test_writer = tf.summary.FileWriter('logs2/test', sess.graph)       # 画出test数据集的loss曲线
@@ -114,7 +115,7 @@ merged = tf.summary.merge_all()                                     # tensorboar
 sess.run(init)                                                      # 初始化
 
 # --------- 训练迭代1000次 -------------
-for i in range(1000):
+for i in range(500):
 
     batch_x, batch_y = mnist.train.next_batch(100)                  # 每次训练的样本集 batch_size=100
     sess.run(train_step, feed_dict={xs: batch_x, ys: batch_y})      # 喂数据
@@ -127,3 +128,6 @@ for i in range(1000):
 
         # 打印准确率
         print('Acc on loop ', i, ':', compute_accuracy(mnist.test.images, mnist.test.labels))
+
+save_path = saver.save(sess, "model/model.ckpt")                    # 保存数据
+print('save_path: ', save_path)                                     # 打印保存路径
