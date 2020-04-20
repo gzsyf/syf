@@ -21,32 +21,26 @@
 extern "C" {
 #endif
 
-/* Includes ------------------------------------------------------------------*/
+/* USER CODE INCLUDES BEGIN --------------------------------------------------*/
+/* USER CODE INCLUDES END ----------------------------------------------------*/
 
 
-/* Private includes ----------------------------------------------------------*/
-/* USER CODE BEGIN Includes */
-/* USER CODE END Includes */
+/* USER CODE BEGIN Exported types --------------------------------------------*/
+/* USER CODE END Exported types ----------------------------------------------*/
 
-/* Exported types ------------------------------------------------------------*/
-/* USER CODE BEGIN ET */
-/* USER CODE END ET */
 
-/* Exported constants --------------------------------------------------------*/
-/* USER CODE BEGIN EC */
-/* USER CODE END EC */
+/* USER CODE BEGIN Exported constants ----------------------------------------*/
+/* USER CODE END Exported constants ------------------------------------------*/
 
-/* Exported macro ------------------------------------------------------------*/
-/* USER CODE BEGIN EM */
-/* USER CODE END EM */
 
-/* Exported functions prototypes ---------------------------------------------*/
-/* USER CODE BEGIN EFP */
-/* USER CODE END EFP */
+/* USER CODE BEGIN Exported macro --------------------------------------------*/
+/* USER CODE END Exported macro ----------------------------------------------*/
 
-/* Private defines -----------------------------------------------------------*/
-/* USER CODE BEGIN Private defines */
-/* USER CODE END Private defines */
+/* USER CODE BEGIN functions prototypes --------------------------------------*/
+/* USER CODE END functions prototypes ----------------------------------------*/
+
+/* USER CODE BEGIN Private defines -------------------------------------------*/
+/* USER CODE END Private defines ---------------------------------------------*/
 
 #ifdef __cplusplus
 }
