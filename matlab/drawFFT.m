@@ -1,35 +1,39 @@
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Script: FFT test
-% Include : fft()
-% Author: syf
-% Date  : 2019-6-17 
-% Introduction : 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+function drawFFT(Fs,L,fun)
+% description....
+% Parameters:
+%	* Fs: Sampling frequency,
+%         more high that Sampling accurate 
+%         Fs/2 > mas_frequency(fun)!
+%	* L: Sampling points
+%        more high that Sampling more long
+%   * fun: input a function of char
+% Return:
+%	* None
+% Example:
+%		>> drawFFT(1000,2000,'8*sin(10.*t)');
 
-%% Step 0: Clear Memory & Command Window
-clc;
-clear all;
-close all;
-
-%% Step 1:define the Sampling frequency and Sampling points
-Fs = 1000;   % Sampling frequency
-             % more high that Sampling accurate
-             % Fs/2 > mas_frequency(fun)!
-L=2000;   % Sampling points
-          % more high that Sampling more long
-
-%% Step 2: define object signal
+%% Step 1: define object signal
+% Description: 
+% Attention:
 T=1/Fs;
 t=(0:L-1)*T;  % Sampling sequence (up to Fs and L)
-x=sin(10.*t); % object signal
 
-%% Step 3: FFT (Enhanced version of discrete Fourier transform)
+if ischar(fun) % change str to funcyion
+    fun=inline(fun);
+end
+x = fun(t);
+
+%% Step 2: FFT (Enhanced version of discrete Fourier transform)
+% Description: 
+% Attention:
 y=fft(x);
-
+P = (y).*conj(y);
 %% Step 3: FFT (Enhanced version of discrete Fourier transform)
+% Description: 
+% Attention:
 f = Fs*(0:(L-1))/L;
 subplot(1,2,1)
-plot(f,abs(y));
+plot(f,P);
 subplot(1,2,2)
 plot(t,x); 
 

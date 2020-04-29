@@ -21,16 +21,17 @@
  extern "C" {
 #endif
 
-/* Includes ------------------------------------------------------------------*/
+/* USER CODE BEGIN Includes --------------------------------------------------*/
 #include "main.h"
 
-/* USER CODE BEGIN Includes */
-
-/* USER CODE END Includes */
+/* USER CODE END Includes ----------------------------------------------------*/
 
 
-/* USER CODE BEGIN Private defines */ 
-	 
+/* USER CODE BEGIN Exported types --------------------------------------------*/
+/* USER CODE END Exported types ----------------------------------------------*/
+
+
+/* USER CODE BEGIN Private defines -------------------------------------------*/
 #define RS_GPIO_PORT GPIOB
 #define RS_PIN GPIO_Pin_2
 	 
@@ -58,34 +59,27 @@
 #define READ_DB7() 		GPIO_ReadInputDataBit(DB7_GPIO_PORT, DB7_PIN)
  
 #define	DATAOUT(x)		GPIO_Write(DATA_GPIO_PORT, x)
+/* USER CODE END Private defines ---------------------------------------------*/
 
-/* USER CODE END Private defines */
 
-
-/* USER CODE BEGIN Prototypes */
-
+/* USER CODE BEGIN Prototypes ------------------------------------------------*/
 void configLcd1602(void);
 void initLcd1602(void);
 void cleanScreenLcd1602(void);
 void setCursorLcd1602(u8 x, u8 y);
 void showStrLcd1602(u8 x, u8 y, u8 *str);
-
-/* USER CODE END Prototypes */
+/* USER CODE END Prototypes --------------------------------------------------*/
 
 #ifdef __cplusplus
 }
 #endif
 #endif /*__ LCD1602_H */
 
-/**
-  * @}
-  */
+/********************************* REFERENCE ***********************************
+ * [1] 
+ ******************************************************************************/
 
-/**
-  * @}
-  */
-
-/************************ (C) COPYRIGHT gzsyf *****END OF FILE****/
+/************************ (C) COPYRIGHT gzsyf *****END OF FILE*****************/
 
 
 

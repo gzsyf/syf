@@ -1,8 +1,0 @@
-本例程以stm32标准库为例
-
-.c文件 改一下/* USER INIT CODE BEGIN */->/* USER INIT CODE END */部分 改成你想要的引脚
-.h文件 改一下/* USER CODE BEGIN Private defines */ ->/* USER CODE END Private defines */ 部分 不同单片机用不同的代码表示引脚的暑出与输入
-
-用到了delay模块 我提供了C512MHz与stm32F103c872MHz的精确延迟模块
-
-main.h 是所有.h文件和main.c都要包含的 里面放的是各个模块的头文件 其中lcd1602.h与delay.h就是要写到main.h中

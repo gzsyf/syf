@@ -14,11 +14,14 @@
   ******************************************************************************
   */
 
-/* Includes ------------------------------------------------------------------*/
+/* USER INCLUDES CODE BEGIN --------------------------------------------------*/
 #include "lcd1602.h"
+/* USER CODE END Includes ----------------------------------------------------*/
 
-/* USER INIT CODE BEGIN */
+/* USER GLOBAL VARIABLE BEGIN ------------------------------------------------*/
+/* USER GLOBAL VARIABLE END --------------------------------------------------*/
 
+/* USER INIT CODE BEGIN ------------------------------------------------------*/
  /**
   * @file   LCD1602 pin configuration
   * @brief  this code is initiate 8 pin mode LCD1602  
@@ -62,9 +65,7 @@ static void setInputModeDB7(void){
 }	
 
 
- 
 
- 
  /**
   * @file   LCD1602 D7 tun into output mode 
   * @brief  because of the LCD1602_Wait_Ready function
@@ -85,14 +86,10 @@ static void setOutputModeDB7(void){
 }	
 	
 	
- 
+/* USER INIT CODE END --------------------------------------------------------*/
 
 
-
-/* USER INIT CODE END */
-
-
-/* USER STATIC CODE BEGIN */
+/* USER STATIC CODE BEGIN ----------------------------------------------------*/
 
  /**
   * @file   check the lcd1602 buzy or not
@@ -154,10 +151,10 @@ static void writeDatLcd1602(u8 dat){
 		
 }
 
-/* USER STATIC CODE END */
+/* USER STATIC CODE END ------------------------------------------------------*/
 
 
-/* USER EXTERN CODE BEGIN */
+/* USER EXTERN CODE BEGIN ----------------------------------------------------*/
  /**
   * @file   clean the screen
   * @brief  command is 0x01
@@ -211,10 +208,15 @@ void initLcd1602(void){
 	writeComLcd1602(0x01);	//clean screen
 }
 
-/* USER EXTERN CODE END */
+/* USER EXTERN CODE END ------------------------------------------------------*/
 
+/* USER INTERRUPT CODE BEGIN -------------------------------------------------*/
+/* USER INTERRUPT  CODE END --------------------------------------------------*/
 
-/************************ (C) COPYRIGHT gzsyf *****END OF FILE****/
+/********************************* REFERENCE ***********************************
+ * [1] 
+ ******************************************************************************/
+/************************ (C) COPYRIGHT gzsyf *****END OF FILE*****************/
 
 
 
