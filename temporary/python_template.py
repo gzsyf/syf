@@ -18,10 +18,13 @@ Date:        2020.4.1
 class ClassName(object):
     """one sentence describe .
     brief:
+		xxx
     attribute:
         xxx:
     method:
+		xxxxx
     example:
+		xxxx
     """
 
     def __init__(self, arg):
@@ -31,21 +34,29 @@ class ClassName(object):
     def mname(self, arg):
         """one sentence describe .
         brief:
+			xxxx
         parameter:
             xxx:
         return:
             xxx:
         example:
+			xxx
         """
         pass    # xxxx
 
 def fname(arg):
     """one sentence describe .
     brief:
+		xxx
     parameter:
         xxx:
     return:
         xxx:
     example:
+		xxxx
     """
     pass
+	
+"""Reference
+[1]
+"""
