@@ -11,15 +11,14 @@ Date:        2020.4.1
 
 
 
-# Description: 
-# Attention:
+''' XXXXX '''
 
 
 class ClassName(object):
     """one sentence describe .
     brief:
 		xxx
-    attribute:
+    member:
         xxx:
     method:
 		xxxxx
