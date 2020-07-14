@@ -8,11 +8,11 @@ function drawCylinder(varargin)
 %   * m: Split number
 % Return: None
 % Example:
-%		>> drawCylinder([3,3,1,10,100])
+%		>> drawCylinder(3,3,1,10,100)
 % Version 1.0, Data 2020.4.2,  Author: syf
 
 
-inArgs = {[3,3,1,10,100]};
+inArgs = {3,3,1,10,100};
 inArgs(1:nargin) = varargin;
 [x1,y1,R,h,m] = deal(inArgs{:});
 
